@@ -217,9 +217,9 @@ $databases = array (
   array (
     'default' => 
     array (
-      'database' => 'ratadb_1',
-      'username' => 'ratadb',
-      'password' => 'm6y89fMptzBLusA2',
+      'database' => 'bookpoints',
+      'username' => 'root',
+      'password' => 'root',
       'host' => 'localhost',
       'port' => '',
       'driver' => 'mysql',
