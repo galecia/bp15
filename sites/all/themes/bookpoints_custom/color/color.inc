@@ -38,6 +38,26 @@ $info = array(
         'fieldsetborder'  => '#e1e1e2',
       ),
     ),
+    // 'default' => array(
+    //   'title' => t('Gray (Default)'),
+    //   'colors' => array(
+    //     'base'            => '#ffffff',
+    //     'background'      => '#f8f8f8',
+    //     'text'            => '#2e2e2e',
+    //     'link'            => '#086782',
+    //     'linkhover'       => '#e25401',
+    //     'linkunderline'   => '#cfdde5',
+    //     'slogan'          => '#e25400',
+    //     'navigation'      => '#2e2e2d',
+    //     'navigationhover' => '#e25402',
+    //     'tab'             => '#f5f4f3',
+    //     'blocktitle'      => '#779125',
+    //     'border'          => '#e1e1e1',
+    //     'borderstrong'    => '#c4c4c4',
+    //     'fieldset'        => '#fbfbfb',
+    //     'fieldsetborder'  => '#e1e1e2',
+    //   ),
+    // ),
     'green1' => array(
       'title' => t('Green 1'),
       'colors' => array(
