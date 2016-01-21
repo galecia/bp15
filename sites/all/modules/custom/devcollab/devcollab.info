@@ -1,0 +1,9 @@
+name = Devcollab
+package = "Devcollab"
+description = "Assorted small customizations by Devcollaborative for Bookpoints"
+
+; Core version (required)
+core = 7.x
+
+; Loadable code files
+files[] = devcollab.module

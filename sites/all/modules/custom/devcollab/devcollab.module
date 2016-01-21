@@ -1,0 +1,64 @@
+<?php
+/**
+ * @file
+ * This is the file description for teh Devcollab module.
+ *
+ * Here we specify hooks/functions that are too small/varied to put into 
+ * their own custom modules.
+ */
+
+/**
+ * Implements hook_block_info().
+ */
+function devcollab_block_info() {
+  $blocks = array();
+  $blocks['my_reading_points'] = array(
+    'info' => t('My Reading Points'),
+  );
+  $blocks['my_activity_points'] = array(
+    'info' => t('My Activity Points'),
+  );
+  return $blocks;
+}
+
+function devcollab_block_view($delta = '') {
+  $block = array();
+
+  switch ($delta) {
+    case 'my_reading_points':
+      $block['subject'] = t('My Reading Points');
+      $points_id = 7;
+      $points_label = "Reading Points";
+      $more_points_label = "Get more Reading Points!";
+      $more_points_link = "my/reading-log";
+      $block['content'] = _devcollab_get_points($points_id, $points_label, $more_points_label, $more_points_link);
+    }
+    
+  switch ($delta) {
+    case 'my_activity_points':
+      $block['subject'] = t('My Activity Points');
+      $points_id = 7;
+      $points_label = "Activity Points";
+      $more_points_label = "Get more Activity Points!";
+      $more_points_link = "activities";
+      $block['content'] = _devcollab_get_points($points_id, $points_label, $more_points_label, $more_points_link);
+    }
+
+  return $block;
+}
+
+/**
+ * get banner 
+ */
+function _devcollab_get_points($points_id, $points_label, $more_points_label, $more_points_link) {
+    global $user;
+    $uid  = $user->uid;
+    $userpoints = userpoints_get_current_points($uid, $points_id);
+    
+      $content = '<div class="points-value">' . $userpoints . '</div>';
+      $content .= '<div class="points-label">' . $points_label . '</div>';
+      $content .= '<div class"more-points">' . l($more_points_label, $more_points_link) . '</div>';
+      
+    
+    return $content;
+}
