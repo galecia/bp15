@@ -217,11 +217,11 @@ $databases = array (
   array (
     'default' => 
     array (
-      'database' => 'pantheon',
-      'username' => 'pantheon',
-      'password' => '2b199832b4a54266af49d2df1006c9bc',
-      'host' => 'dbserver.dev.ded79be2-df74-4893-bd0c-ea24129bb283.drush.in',
-      'port' => '17970',
+      'database' => 'clad_clasp',
+      'username' => 'clad',
+      'password' => 'GqjVBA4BDaasWZ4B',
+      'host' => 'localhost',
+      'port' => '',
       'driver' => 'mysql',
       'prefix' => '',
     ),
