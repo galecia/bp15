@@ -1,0 +1,14 @@
+diff --git a/service_links.module b/service_links.module
+index 615a77f..2947628 100644
+--- service_links.module
++++ service_links.module
+@@ -880,7 +880,8 @@ function service_links_show($node) {
+     $language = isset($node->field_tags[$node->language]) ? $node->language : 'und';
+ 
+     foreach ($node->field_tags[$language] as $term) {
+-      $category_type |= in_array($term['tid'], $categories_allowed, FALSE);
++      $tid = isset($term['tid']) ? $term['tid'] : $term['target_id'] ;
++      $category_type |= in_array($tid, $categories_allowed, FALSE);
+     }
+   }
+   if ($node_type || $category_type) {
